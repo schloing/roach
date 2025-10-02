@@ -1,6 +1,6 @@
 <script lang="ts">
-    import RoachGallery from "$/lib/RoachGallery.svelte";
-    import { roach_tags } from "$/lib/categories";
+    import RoachGallery from "$/lib/components/RoachGallery.svelte";
+    import { roach_tags } from "$/lib/roach";
 </script>
 
 <main>
@@ -8,7 +8,7 @@
         <div class="roach-tag">
             <p class="roach-title">
                 {tag.name}
-                <span class="roach-description">{tag.description}</span>
+                <span class="roach-description fine">{tag.description}</span>
             </p>
 
             <RoachGallery />
@@ -30,7 +30,6 @@
     .roach-description {
         font-style: italic;
         font-size: 1rem;
-        color: var(--secondary);
     }
 
     .roach-tag {
