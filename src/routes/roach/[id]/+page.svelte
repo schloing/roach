@@ -1,12 +1,11 @@
 <script lang="ts">
-    import IconButton from "$/lib/IconButton.svelte";
-    import Meter from "$/lib/Meter.svelte";
+    import IconButton from "$/lib/components/IconButton.svelte";
+    import Meter from "$/lib/components/Meter.svelte";
     import {
         Heart,
         FlagOff,
         EyeOff,
         MessageSquare,
-        Star,
         ArrowBigUp,
         ArrowBigDown,
     } from "lucide-svelte";
@@ -80,7 +79,7 @@
             <div class="price">
                 ${price}
                 {#if payout_type}
-                    <span class="price-modifier">/hr</span>
+                    <span class="price-modifier fine">/hr</span>
                 {/if}
             </div>
 
@@ -92,11 +91,11 @@
             />
 
             <div class="user-info">
-                <p class="user">
+                <p class="user fine">
                     @{user}
                 </p>
 
-                <p class="user">"{about}"</p>
+                <p class="user fine">"{about}"</p>
 
                 <p>buyer + seller</p>
 
@@ -123,10 +122,6 @@
 </main>
 
 <style>
-    main {
-        max-width: 70%;
-    }
-
     .tags {
         width: 100%;
         overflow-x: scroll;
@@ -144,7 +139,6 @@
     }
 
     .user {
-        color: var(--secondary);
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
@@ -176,7 +170,6 @@
 
     .price-modifier {
         font-size: 0.9rem;
-        color: var(--secondary);
     }
 
     .page {
