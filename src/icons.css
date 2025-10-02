@@ -2,5 +2,5 @@
     color: var(--text);
     width: 1.2rem;
     height: 1.2rem;
-    transition: fill 250ms, stroke 250ms;
+    transition: color 250ms, fill 250ms, stroke 250ms;
 }

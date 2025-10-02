@@ -7,6 +7,8 @@
 
     --green: #228528;
     --red: #de1d1d;
+    --dark-red: #791111;
+    --dark-primary: #1d5c88;
     --orange: #dd7724;
     --pink: #c6405b;
     --aqua: #43cedb;
@@ -30,9 +32,26 @@ body {
 }
 
 main {
-    max-width: 800px;
+    max-width: 70%;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+.form {
+    background: var(--accent);
+    padding: 2.2em 1.5em;
+    border-radius: 0.75em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.form>button {
+    background: var(--background);
+    width: 500px;
 }
 
 h1 {
@@ -57,6 +76,7 @@ a:hover {
     color: var(--secondary);
 }
 
+a.button,
 button {
     background: none;
     padding: 0.75rem 2.5rem;
@@ -65,10 +85,30 @@ button {
     font-size: 1.25rem;
 }
 
+a.button:hover,
 button:hover {
     color: var(--secondary);
 }
 
 input[type="text"] {
-    width: 500px;
+    width: 100%;
+    padding: 0 1.5em;
+    height: 2.5rem;
+    border-radius: 1em;
+}
+
+.fine {
+    color: var(--secondary);
+}
+
+.primary {
+    border: none;
+    border-radius: 2em;
+    background: var(--primary);
+    color: #000 !important;
+    box-shadow: 0;
+}
+
+.dangerous {
+    background: var(--dark-red) !important;
 }
