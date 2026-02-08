@@ -17,7 +17,8 @@
 
 <header class={scrollY > 10 ? "compact" : ""}>
     <nav>
-        <div>
+        <div class="nav-buttons">
+            <img src="/images/roach.png" alt="logo" height=52 width=52/>
             <h1><a href="/">roach</a></h1>
         </div>
 
@@ -83,6 +84,7 @@
     .nav-buttons {
         display: flex;
         gap: 1em;
+        align-items: center;
     }
 
     @media (width <= 1075px) {
