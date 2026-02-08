@@ -17,14 +17,22 @@
 
 <header class={scrollY > 10 ? "compact" : ""}>
     <nav>
-        <h1><a href="/">roach</a></h1>
-        <Search />
+        <div>
+            <h1><a href="/">roach</a></h1>
+        </div>
+
+        <div>
+            <Search />
+        </div>
+
         <div class="nav-buttons">
             <a class="button" href="/req/">req</a>
             {#if !session}
                 <PrimaryLink href="/user/login">login</PrimaryLink>
             {:else}
-                <PrimaryLink href={`/user/${session.id}`}>{session.name}</PrimaryLink>
+                <PrimaryLink href={`/user/${session.id}`}
+                    >{session.name}</PrimaryLink
+                >
             {/if}
         </div>
     </nav>
@@ -56,14 +64,20 @@
     }
 
     nav {
-        width: fit-content;
+        box-sizing: border-box;
+        max-width: 90%;
         height: 100%;
         margin: 0 auto;
         padding: 0 1rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 6fr 2fr;
         align-items: center;
-        justify-content: space-between;
-        gap: 3em;
+        gap: 2em;
+        overflow: hidden;
+    }
+
+    nav > div {
+        text-align: center;
     }
 
     h1 {

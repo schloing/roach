@@ -8,7 +8,6 @@
 
 <style>
     a {
-        width: 15rem;
         overflow: hidden;
         text-align: center;
     }
