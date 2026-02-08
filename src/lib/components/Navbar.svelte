@@ -40,7 +40,7 @@
 
 <style>
     :root {
-        --navbar-height: 120px;
+        --navbar-height: 100px;
         --navbar-scrolled-height: 80px;
 
         --navbar-bg: var(--background);
@@ -55,12 +55,8 @@
             350ms background,
             350ms box-shadow;
         height: var(--navbar-height);
-        background: var(--navbar-bg);
-    }
-
-    .compact {
-        height: var(--navbar-scrolled-height);
-        background: var(--navbar-scrolled-bg);
+        background: color-mix(in srgb, var(--accent) 50%, transparent);
+        margin-bottom: 1em;
     }
 
     nav {
