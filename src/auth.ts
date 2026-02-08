@@ -18,6 +18,7 @@ export const { handle } = SvelteKitAuth({
     session: {
         strategy: "database"
     },
+    trustHost: true,
     callbacks: {
         async session({ session, user }) {
             const [dbUser] = await db.select().from(users).where(eq(users.id, user.id)).limit(1);
